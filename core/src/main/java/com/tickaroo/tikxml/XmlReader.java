@@ -789,7 +789,7 @@ public class XmlReader implements Closeable {
     int p = 0;
     while (fillBuffer(p + 1)) {
       int c = buffer.getByte(p++);
-      if (c == '\n' || c == ' ' || c == '\r' || c == '\t') {
+      if (c == '\n' || c == ' ' || c == '\r' || c == '\t' || c < 0) {
         continue;
       }
 
